@@ -1,0 +1,81 @@
+#resume {
+	display: flex;
+	flex-direction: column;
+	@media (max-width: $switchWidth1) {
+		align-items: center;
+	}
+
+	.heading1 {
+		display: flex;
+		flex-direction: row;
+		font-family: $nameFont;
+		margin-bottom: .5rem;
+
+		span {
+			margin-right: .5rem;
+		}
+	}
+
+	img {
+		$img_size: 6rem;
+		width: $img_size;
+		height: $img_size;
+		padding-right: .75rem;
+		@media (max-width: $switchWidth1) {
+			padding-right: 0;
+		}
+	}
+
+	.hrWrap {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 30%;
+		hr {
+			color: $teal;
+			border-color: $teal;
+			width: 100%;
+		}
+	}
+
+	.experience {
+		display: flex;
+		align-items: center;
+		@media (max-width: $switchWidth1) {
+			flex-direction: column;
+			text-align: center;
+		}
+		margin-bottom: .75rem;
+		margin-top: .75rem;
+		font-family: $nameFont;
+
+		.exp_text {
+			display: flex;
+			flex-direction: column;
+
+			.exp_name {
+				font-size: 1.8rem;
+			}
+
+			.exp_desc {
+				font-family: $textFont;
+				font-size: 1.4rem;
+			}
+
+			.dates {
+				font-family: $textFont;
+				font-style: italic;
+				font-size: 1rem;
+			}
+		}
+	}
+
+	#UPE {
+		$img_size: 6rem;
+		padding-left: $img_size*.23;
+		padding-right: $img_size*.23;
+		width: $img_size*.54;
+		height: $img_size;
+	}
+
+}

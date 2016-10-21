@@ -1,0 +1,49 @@
+#projects {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	@import "construction";
+
+	.project {
+		display: flex;
+		flex: 0 0 18rem;
+		flex-direction: column;
+		@media (max-width: $switchWidth2) {
+		}
+		text-decoration: none;
+		color: white;
+		margin: .5rem .1rem .5rem .1rem;
+
+		span {
+			display: flex;
+			justify-content: flex-end;
+			font-family: $nameFont;
+			font-size: 2rem;
+			margin-bottom: -.2rem;
+			min-height: 3rem;
+		}
+
+		.hex_wrap {
+			margin-left: .3rem;
+			min-width: 8.33rem;
+		}
+
+		.proj_bg {
+			display: flex;
+			align-items: center;
+			height: 6.5rem;
+		}
+
+		.proj_desc {
+			height: 5.5rem;
+			font-family: $textFont;
+			font-size: .75rem;
+			padding-left: .5rem;
+
+			ul {
+				padding-left: 1rem;
+			}
+		}
+	}
+}

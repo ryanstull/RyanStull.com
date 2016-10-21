@@ -1,0 +1,176 @@
+$nameFont: 'Oswald', sans-serif;
+$textFont: 'Sanchez', serif;
+$fancyText: 'Open Sans', sans-serif;
+
+$rustOrange: #fb8821;
+$teal: #49d3ca;
+$bgColor: #383838;
+
+$switchWidth2: 400px;
+$switchWidth1: 500px;
+
+@import "templates/_hexagon";
+
+::-moz-selection {
+	background-color: $teal;
+	color: white;
+}
+
+::selection {
+	background-color: $teal;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	//background: $bgColor;
+	background: url(../images/Wiki-background3.jpeg);
+
+	#bodyWrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex: 0 1 45rem;
+		padding: 1rem;
+		//max-width: 45rem;
+	}
+}
+
+.personal_words {
+	font-family: $fancyText;
+	font-style: italic;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: .75rem;
+
+	#name {
+		white-space: nowrap;
+		font-family: $nameFont;
+		font-size: 4rem;
+		color: white;
+	}
+
+	#tagLine {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		text-align: center;
+		color: white;
+		font-size: 1.2rem;
+		font-family: $textFont;
+	}
+	#nameLine {
+		width: 60%;
+		color: $teal;
+		border-color: $teal;
+	}
+}
+
+nav {
+	@media(max-width: $switchWidth2) {
+		flex-direction: column;
+		align-items: center;
+		max-height: none;
+		.spacer {
+			color: white;
+		}
+	}
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	max-width: 38.6rem;
+	max-height: 1rem;
+	margin-bottom: 1rem;
+
+	.navButtonWrapper {
+		display: flex;
+		justify-content: center;
+		flex: 0 0 15%;
+		cursor: pointer;
+		@media(max-width: $switchWidth2) {
+			width: 35%;
+			justify-content: flex-start;
+		}
+
+		.navButton {
+			display: flex;
+			flex: 1 0 0;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			font-size: 1.3rem;
+			font-family: $nameFont;
+			color: $rustOrange;
+			transition: color, background .15s ease;
+		}
+
+		.active {
+			color: white;
+			background: $rustOrange;
+			border-radius: .2rem;
+			transition: color, background .15s ease;
+		}
+	}
+}
+
+#proPicWrapper {
+	float: left;
+	background-color: white;
+	border: 1px solid gray;
+	padding: 2px;
+	margin-right: 1rem;
+	@media (max-width: $switchWidth1) {
+		float: none;
+		margin: 0;
+	}
+
+	img {
+		$img_size: 12rem;
+		width: $img_size;
+		height: $img_size;
+		display: block;
+	}
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	section {
+		margin: .5rem;
+		padding: .5rem;
+		color: white;
+		font-size: 1.6rem;
+	}
+}
+
+.v_space {
+	height: 3rem;
+}
+
+@import "blog";
+
+@import "projects";
+
+@import "hex_projects";
+
+@import "resume";
+
+@import "about";
+
+@import "contact";

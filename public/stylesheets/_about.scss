@@ -1,0 +1,16 @@
+#about {
+	@media (max-width: $switchWidth1) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.footnote {
+		font-size: 1rem;
+	}
+
+	.asterisk {
+		color: $teal;
+	}
+}

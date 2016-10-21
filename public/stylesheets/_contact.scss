@@ -1,0 +1,96 @@
+#contact {
+	display: flex;
+	flex-basis: 100%;
+	justify-content: space-around;
+	font-family: $textFont;
+	@media(max-width: $switchWidth1) {
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#contact_info {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.4rem;
+
+		a {
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+			color: white;
+
+			#send_me {
+				color: $teal;
+				font-weight: 600;
+				display: inline-block;
+				text-align: center;
+				border: 1px solid white;
+				background-color: white;
+				border-radius: 1rem;
+				padding: .4rem;
+				transition: color, background-color, border-color, .15s ease;
+			}
+
+			#send_me:hover {
+				color: white;
+				background-color: $rustOrange;
+				border-color: $rustOrange;
+			}
+
+		}
+
+		.form_of_contact {
+			display: inline-block;
+			font-family: $nameFont;
+			//width: 50%;
+			min-width: 5.5rem;
+			font-size: 1.8rem;
+		}
+
+		.text {
+
+		}
+
+		.textarea {
+			resize: vertical;
+			word-wrap: normal;
+		}
+	}
+
+	#white_hr_wrap {
+		display: flex;
+		width: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		hr {
+			width: 100%;
+			color: $rustOrange;
+			border-color: $rustOrange;
+		}
+	}
+
+	#logos {
+		display: flex;
+		flex: 0 1 5rem;
+		flex-direction: column;
+		$img_size: 4rem;
+		@media(max-width: $switchWidth1) {
+			flex-shrink: 0;
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100%;
+		}
+
+		img {
+			margin: .3rem;
+			width: $img_size;
+			height: $img_size;
+		}
+
+		#linkedin {
+			width: $img_size*1.109;
+		}
+	}
+}

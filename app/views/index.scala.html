@@ -1,0 +1,26 @@
+@main("Ryan Stull") {
+
+	<div id="bodyWrapper">
+		<header>
+			<span id="name">Ryan Stull</span>
+			<hr id="nameLine"/>
+			<span id="tagLine">Aspiring Software Developer.
+				Graduate of Saint Joseph's University</span>
+		</header>
+		<nav>
+			<div class="navButtonWrapper"><a class="navButton">Blog</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="navButton">Projects</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="navButton">Resume</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="navButton active">About</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="navButton">Contact</a></div>
+		</nav>
+		<main>
+			@sections.blog()
+			@sections.projects()
+			@sections.resume()
+			@sections.about()
+			@sections.contact()
+		</main>
+	</div>
+}
+
