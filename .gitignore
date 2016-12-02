@@ -2,5 +2,5 @@
 .idea
 target
 project/project
-#/public/stylesheets/main_style.css.map
-#/public/stylesheets/main_style.css
+public/stylesheets/main_style.css.map
+public/stylesheets/main_style.css
