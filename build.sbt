@@ -1,6 +1,6 @@
 name := "personal_site"
 
-version := "1.1"
+version := "1.1.01"
 
 lazy val `personal_site` = (project in file(".")).enablePlugins(PlayScala,sbtdocker.DockerPlugin)
 
