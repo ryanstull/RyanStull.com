@@ -1,4 +1,7 @@
-@main("Ryan Stull") {
+@import assist.sections.ViewAccessPoint.Implicits._
+@import play.api.Play.current
+
+@main_template("Ryan Stull") {
 
 	<div id="bodyWrapper">
 		<header>
@@ -8,11 +11,11 @@
 				Graduate of Saint Joseph's University</span>
 		</header>
 		<nav>
-			<div class="navButtonWrapper"><a class="navButton">Blog</a></div><span class="spacer">|</span>
-			<div class="navButtonWrapper"><a class="navButton">Projects</a></div><span class="spacer">|</span>
-			<div class="navButtonWrapper"><a class="navButton">Resume</a></div><span class="spacer">|</span>
-			<div class="navButtonWrapper"><a class="navButton active">About</a></div><span class="spacer">|</span>
-			<div class="navButtonWrapper"><a class="navButton">Contact</a></div>
+			<div class="navButtonWrapper"><a class="@{"navButton " + classPicker.getNavClass("blog")}">Blog</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="@{"navButton " + classPicker.getNavClass("projects")}">Projects</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="@{"navButton " + classPicker.getNavClass("resume")}">Resume</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="@{"navButton " + classPicker.getNavClass("about")}">About</a></div><span class="spacer">|</span>
+			<div class="navButtonWrapper"><a class="@{"navButton " + classPicker.getNavClass("contact")}">Contact</a></div>
 		</nav>
 		<main>
 			@sections.blog()

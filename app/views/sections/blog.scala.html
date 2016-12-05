@@ -1,4 +1,7 @@
-<section id="blog" style="display: none">
+@import assist.sections.ViewAccessPoint.Implicits._
+@import play.api.Play.current
+
+<section id="blog" class="@classPicker.getSectionClass("blog")">
 
 	<span class="personal_words">
 		Future blog posts will go here!

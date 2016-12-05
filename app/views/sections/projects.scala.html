@@ -1,4 +1,7 @@
-<section id="projects" style="display: none">
+@import assist.sections.ViewAccessPoint.Implicits._
+@import play.api.Play.current
+
+<section id="projects" class="@classPicker.getSectionClass("projects")">
 
 	<div class="proj_construc_wrap">
 		<img src="@routes.Assets.at("images/util/construction3.png")" class="construction_image" alt=""/>
@@ -12,7 +15,7 @@
 					</div>
 				</div>
 				<div class="proj_desc">
-						Eyecontext provides helpful visual cues to those with alexia and
+					Eyecontext provides helpful visual cues to those with alexia and
 					dyslexia so they may more easily use the web.
 				</div>
 			</div>
