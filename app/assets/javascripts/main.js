@@ -7,20 +7,26 @@ var mq = window.matchMedia( "(max-width: 400px)" );
 $('.navButtonWrapper').on({
 	click: function() {
 		if(!$(this).children("a").hasClass("active")){
-			var txt = $(this).text();
-			var selex = txt.toLowerCase();
+			changeNavClass(this);
+			changeSectionClass(this);
+		}
+
+		function changeNavClass(context) {
 			$("nav").children().each(function(){
 				$(this).children().removeClass("active");
 			});
-			$(this).children("a").addClass("active");
+			$(context).children("a").addClass("active");
 			if(!mq.matches){
-				animateUpAndDown(this,down)
+				animateUpAndDown(context,down)
 			}
+		}
+		function changeSectionClass(context) {
+			var txt = $(context).text().toLowerCase();
 			$("main").children().each(function(){
-				if($(this).hasClass("active") && $(this).id!=selex ){
+				if($(this).hasClass("active") && $(this).id!=txt ){
 					$(this).removeClass("active");
 					$(this).fadeOut(transitionSpeed,function() {
-						$("#"+selex).addClass("active").fadeIn(transitionSpeed);
+						$("#"+txt).removeClass("inactive").addClass("active").fadeIn(transitionSpeed);
 					});
 				}
 			});

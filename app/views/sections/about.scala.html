@@ -1,4 +1,7 @@
-<section id="about" class="active">
+@import assist.sections.ViewAccessPoint.Implicits._
+@import play.api.Play.current
+
+<section id="about" class="@classPicker.getSectionClass("about")">
 	<div id="proPicWrapper">
 		<img src="@routes.Assets.at("images/propic.jpg")" alt="Profile Picture" id="proPic"/>
 	</div>
