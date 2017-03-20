@@ -9,8 +9,6 @@ $bgColor: #383838;
 $switchWidth2: 400px;
 $switchWidth1: 500px;
 
-@import "templates/_hexagon";
-
 ::-moz-selection {
 	background-color: $teal;
 	color: white;
@@ -170,8 +168,6 @@ main {
 @import "blog";
 
 @import "projects";
-
-@import "hex_projects";
 
 @import "resume";
 

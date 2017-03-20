@@ -1,0 +1,19 @@
+@(name: String,desc: String,dates: String,imgAlt: String,imgSrc: String)
+
+@idIfNeeded(name: String) = @{
+	val map = Map("Upsilon Pi Epsilon" -> "UPE")
+
+	map.get(name) match{
+		case Some(a) => "id="+a
+		case None => ""
+	}
+}
+
+<div class="experience">
+	<img src="@routes.Assets.at(imgSrc)" @idIfNeeded(name) alt="@imgAlt"/>
+	<div class="exp_text">
+		<span class="exp_name">@name</span>
+		<span class="exp_desc">@desc</span>
+		<span class="dates">@dates</span>
+	</div>
+</div>
