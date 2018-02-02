@@ -23,7 +23,7 @@ $('.navButtonWrapper').on({
 		function changeSectionClass(context) {
 			var txt = $(context).text().toLowerCase();
 			$("main").children().each(function(){
-				if($(this).hasClass("active") && $(this).id!=txt ){
+				if($(this).hasClass("active") && $(this).id!==txt ){
 					$(this).removeClass("active");
 					$(this).fadeOut(transitionSpeed,function() {
 						$("#"+txt).removeClass("inactive").addClass("active").fadeIn(transitionSpeed);
