@@ -1,18 +1,86 @@
 @import assist.sections.ViewAccessPoint.Implicits._
 @import play.api.Play.current
-@import resumeUtils._
 
 <section id="resume" class="@classPicker.getSectionClass("resume")">
+
+	<div class="heading1">EXPERIENCE</div>
+
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/bottomline.jpeg")" alt="Bottomline Technologies"/>
+		<div class="exp_text">
+			<span class="exp_name">Bottom Technologies</span>
+			<span class="exp_desc">Software Implementation Engineer</span>
+			<span class="dates">08/15 - </span>
+		</div>
+	</div>
+
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/evoxlabs_logo.png")" alt="Evox Labs"/>
+		<div class="exp_text">
+			<span class="exp_name">EvoXLabs</span>
+			<span class="exp_desc">Volunteer</span>
+			<span class="dates">04/15</span>
+		</div>
+	</div>
+
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/exelis_logo.gif")" alt="Exelis"/>
+		<div class="exp_text">
+			<span class="exp_name">Exelis Inc.</span>
+			<span class="exp_desc">IT Intern</span>
+			<span class="dates">06/14 - 08/14</span>
+		</div>
+	</div>
+
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/falcon_jet_logo.jpg")" alt="Falcon Jet"/>
+		<div class="exp_text">
+			<span class="exp_name">Dassault Falcon Jet</span>
+			<span class="exp_desc">IT Intern</span>
+			<span class="dates">06/13 - 08/13</span>
+		</div>
+	</div>
+
+	<div class="v_space"></div>
+
+	<div class="heading1">
+		<span>CERTIFICATES</span>
+	</div>
+
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/coursera-fb.png")" id="coursera" alt="Coursera"/>
+		<div class="exp_text">
+			<span class="exp_name">Functional Programming in Scala Specialization</span>
+			<span class="certificates"><a href="https://www.coursera.org/account/accomplishments/certificate/EJM88J5AAY36?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bw5W%2F0FJNQNOlGzFZzQ4zpA%3D%3D">
+				Functional Programming Principles in Scala
+			</a></span>
+			<span class="certificates"><a href="https://www.coursera.org/account/accomplishments/certificate/F3ERL2Z9SWJQ?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bw5W%2F0FJNQNOlGzFZzQ4zpA%3D%3D" >
+				Functional Program Design in Scala
+			</a></span>
+			<span class="certificates"><a href="https://www.coursera.org/account/accomplishments/certificate/KQKSAAFERPMJ?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bw5W%2F0FJNQNOlGzFZzQ4zpA%3D%3D">
+				Parallel Programming
+			</a></span>
+			<span class="certificates"><a href="https://www.coursera.org/account/accomplishments/certificate/KQKSAAFERPMJ?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bw5W%2F0FJNQNOlGzFZzQ4zpA%3D%3D">
+				Big Data Analysis with Scala and Spark
+			</a></span>
+		</div>
+	</div>
+
+	<div class="v_space"></div>
 
 	<div class="heading1">
 		<span>HONORS</span>
 	</div>
 
-	@experience("Upsilon Pi Epsilon"
-		,"International Honor Society for the Computing and Information Disciplines"
-		,"Inducted March 2014"
-		,"Upsilon Pi Epsilon Medallion"
-		,"images/resume/UPE.png")
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/UPE.png")" id="UPE" alt="Upsilon Pi Epsilon Medallion"/>
+		<div class="exp_text">
+			<span class="exp_name">Upsilon Pi Epsilon</span>
+			<span class="exp_desc">International Honor Society for the Computing
+				and Information Disciplines</span>
+			<span class="dates">Inducted March 2014</span>
+		</div>
+	</div>
 
 	<div class="v_space"></div>
 
@@ -20,64 +88,24 @@
 		<span>EDUCATION</span>
 	</div>
 
-	@experience("Saint Joseph's University"
-		,"BS in Computer Science & Physics"
-		,"08/11 - 05/15"
-		,"SJU"
-		,"images/resume/sju_red.png"
-	)
+	<div class="experience">
+		<img src="@routes.Assets.at("images/resume/sju_red.png")" alt="SJU"/>
+		<div class="exp_text">
+			<span class="exp_name">Saint Joseph's University</span>
+			<span class="exp_desc">BS in Computer Science & Physics</span>
+			<span class="dates">08/11 - 05/15</span>
+		</div>
+	</div>
 
 	<div class="v_space"></div>
 
-	<div class="heading1">EXPERIENCE</div>
-
-	@experience("Bottom Technologies"
-		,"Software Implementation Engineer"
-		,"08/15 - "
-		,"Bottomline Technologies"
-		,"images/resume/bottomline.jpeg"
-	)
-
-	@experience("EvoXLabs"
-		,"Volunteer"
-		,"04/15"
-		,"EvoX Labs"
-		,"images/resume/evoxlabs_logo.png"
-	)
-
-	@experience("Exelis Inc."
-		,"IT Intern"
-		,"06/14 - 08/14"
-		,"Exelis"
-		,"images/resume/exelis_logo.gif"
-	)
-
-	@experience("Saint Joseph's University"
-		,"Physics Tutor"
-		,"01/14 - 05/16"
-		,"SJU"
-		,"images/resume/sju_red.png"
-	)
-
-	@experience("Dassault Falcon Jet"
-		,"IT Intern"
-		,"06/13 - 08/13"
-		,"Falcon Jet"
-		,"images/resume/falcon_jet_logo.jpg"
-	)
-
-	@experience("Saint Joseph's University"
-		,"Student Researcher (Physics)"
-		,"06/12 - 05/16"
-		,"SJU"
-		,"images/resume/sju_red.png"
-	)
-
-	@experience("Cranford High School"
-		,"Webmaster"
-		,"09/10 - 06/11"
-		,"Cranford High"
-		,"images/resume/cranford.png"
-	)
+	<a href="@routes.Assets.at("Ryan%20Stull%20-%20Resume%20Public.pdf")" class="pdf_resume">
+		<div class="experience">
+			<img src="@routes.Assets.at("images/resume/resume_icon.png")" alt="PDF Resume"/>
+			<div class="exp_text">
+				<span class="exp_name">PDF Resume</span>
+			</div>
+		</div>
+	</a>
 
 </section>
