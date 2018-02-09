@@ -4,12 +4,11 @@ $fancyText: 'Open Sans', sans-serif;
 
 $rustOrange: #fb8821;
 $teal: #49d3ca;
+$lightTeal: #98e6e1;
 $bgColor: #383838;
 
 $switchWidth2: 400px;
 $switchWidth1: 500px;
-
-@import "templates/_hexagon";
 
 ::-moz-selection {
 	background-color: $teal;
@@ -170,8 +169,6 @@ main {
 @import "blog";
 
 @import "projects";
-
-@import "hex_projects";
 
 @import "resume";
 

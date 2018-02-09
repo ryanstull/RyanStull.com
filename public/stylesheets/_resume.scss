@@ -67,6 +67,20 @@
 				font-style: italic;
 				font-size: 1rem;
 			}
+
+			.certificates {
+				font-family: $textFont;
+				font-style: italic;
+				font-size: 1rem;
+
+				a {
+					color: $lightTeal;
+				}
+
+				a:visited {
+					color: $lightTeal;
+				}
+			}
 		}
 	}
 
@@ -78,4 +92,8 @@
 		height: $img_size;
 	}
 
+	.pdf_resume {
+		align-self: center;
+		color: $lightTeal;
+	}
 }

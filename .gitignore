@@ -4,3 +4,4 @@ target
 project/project
 public/stylesheets/main_style.css.map
 public/stylesheets/main_style.css
+conf/application.conf
